@@ -1,0 +1,22 @@
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
+import 'package:tab_bar/Screens/views/shared/appstyle.dart';
+
+
+class CartPage extends StatefulWidget {
+  const CartPage({super.key});
+
+  @override
+  State<CartPage> createState() => _CartPageState();
+}
+
+class _CartPageState extends State<CartPage> {
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      body: Center(child: Text("This is home", style: appstyle(40, Colors.lightBlue, FontWeight.bold),),
+    ),
+    );
+  }
+}

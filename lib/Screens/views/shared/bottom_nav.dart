@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Buttom_navgationbar extends StatelessWidget {
   const Buttom_navgationbar({
-    super.key, this.onTap,
+    super.key, this.onTap, required IconData Icons,
   });
   final void Function()? onTap;
 

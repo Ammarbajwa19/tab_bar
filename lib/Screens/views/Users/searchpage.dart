@@ -3,18 +3,18 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 import 'package:tab_bar/Screens/views/shared/appstyle.dart';
 
-class searchpage extends StatefulWidget {
-  const searchpage({super.key});
+class SearchPage extends StatefulWidget {
+  const SearchPage({super.key});
 
   @override
-  State<searchpage> createState() => _searchpageState();
+  State<SearchPage> createState() => _SearchPageState();
 }
 
-class _searchpageState extends State<searchpage> {
+class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Center(child: Text("This is home", style: appstyle(40, Colors.amber, FontWeight.bold),),
+      body: Center(child: Text("This is home", style: appstyle(40, Colors.white, FontWeight.bold),),
     ),
     );
   }
