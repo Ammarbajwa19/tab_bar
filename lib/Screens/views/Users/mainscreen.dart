@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:tab_bar/Screens/views/Users/cartpage.dart';
 import 'package:tab_bar/Screens/views/shared/appstyle.dart';
@@ -14,7 +15,6 @@ class mainscreen extends StatelessWidget {
     Homepage(),
     ProfilePage(),
     SearchPage(),
-    MyApp(),
 
   ];
 
@@ -55,8 +55,6 @@ class mainscreen extends StatelessWidget {
       )
       ),
       ),
-      
     );
   }
 }
-
