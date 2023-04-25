@@ -8,8 +8,8 @@ import 'profile.dart';
 import 'homepage.dart';
 import 'searchpage.dart';
 
-class mainscreen extends StatelessWidget {
-   mainscreen({super.key});
+class Mainscreen extends StatelessWidget {
+   Mainscreen({super.key});
   List<Widget> pageList =const[
     CartPage(),
     Homepage(),
@@ -35,19 +35,19 @@ class mainscreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
         Buttom_navgationbar(
-          onTap: () {},Icons:Icons.home,
+          onTap: () {},icon: Icons.home,
         ),
         Buttom_navgationbar(
-          onTap: () {},Icons:Icons.search,
+          onTap: () {},icon:Icons.search,
         ),
         Buttom_navgationbar(
-          onTap: () {},Icons:Icons.add,
+          onTap: () {},icon:Icons.add,
         ),
         Buttom_navgationbar(
-          onTap: () {},Icons:Icons.shopping_cart,
+          onTap: () {},icon:Icons.shopping_cart,
         ),
         Buttom_navgationbar(  
-          onTap: () {},Icons:Icons.person,
+          onTap: () {},icon:Icons.person,
         ),
         
         ],

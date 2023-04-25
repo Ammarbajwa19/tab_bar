@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 
 class Buttom_navgationbar extends StatelessWidget {
   const Buttom_navgationbar({
-    super.key, this.onTap, required IconData Icons,
+    super.key, this.onTap, this.icon,
   });
   final void Function()? onTap;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(onTap: (){},
-    child: const SizedBox(
+    child: SizedBox(
       height: 36,
       width: 36,  
 
-      child: Icon(Icons.home, color: Colors.white,),
+      child: Icon(icon, color: Colors.white,),
     ),
     );
   }
