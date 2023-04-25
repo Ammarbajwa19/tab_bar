@@ -15,7 +15,7 @@ class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Center(child: Text("This is home", style: appstyle(40, Colors.lightBlue, FontWeight.bold),),
+      body: Center(child: Text("This is cartpage", style: appstyle(40, Colors.lightBlue, FontWeight.bold),),
     ),
     );
   }

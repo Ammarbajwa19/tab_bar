@@ -9,7 +9,8 @@ class Buttom_navgationbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(onTap: (){},
+    return GestureDetector(
+    onTap: onTap,
     child: SizedBox(
       height: 36,
       width: 36,  

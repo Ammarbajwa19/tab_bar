@@ -14,7 +14,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Center(child: Text("This is home", style: appstyle(40, Colors.amber, FontWeight.bold),),
+      body: Center(child: Text("This is Home", style: appstyle(40, Colors.amber, FontWeight.bold),),
     ),
     );
   }
