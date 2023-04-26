@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:tab_bar/Screens/views/shared/appstyle.dart';
-
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
@@ -14,8 +10,19 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Center(child: Text("This is Home", style: appstyle(40, Colors.amber, FontWeight.bold),),
-    ),
+      body: SizedBox(height: MediaQuery.of(context).size.height,
+      child: Stack(
+        children: [
+          Container(
+            padding: EdgeInsets.fromLTRB(16, 45, 0, 0),
+            height: MediaQuery.of(context).size.height*0.4,
+            decoration: const BoxDecoration(
+              image: DecorationImage(image: AssetImage("lib/assets/images/intop1.png"),fit: BoxFit.fill )
+            ),
+          )
+        ],
+      ),
+      ),
     );
   }
 }
