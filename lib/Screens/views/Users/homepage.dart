@@ -112,8 +112,17 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Colors.pink,
-                                  borderRadius: BorderRadius.all(Radius.circular(16))
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                                  boxShadow: 
+                                  [
+                                    BoxShadow (
+                                    color: Colors.black38,
+                                    spreadRadius: 1,
+                                    blurRadius: 0.8,
+                                    offset: Offset(0, 1)
+                                    
+                                    )]
                                 ),
                                 height: MediaQuery.of(context).size.height*0.12,
                                 width: MediaQuery.of(context).size.width*0.28 , 
