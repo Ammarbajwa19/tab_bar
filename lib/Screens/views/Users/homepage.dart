@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:tab_bar/Screens/views/shared/appstyle.dart';
 import 'package:antdesign_icons/antdesign_icons.dart';
+import 'package:tab_bar/Screens/views/shared/product_shared.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -14,6 +15,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
   late final TabController _tabController = TabController(length: 3, vsync: this);
   @override
   Widget build(BuildContext context) {
+      backgroundColor: const Color(0xFFE2E2E2);
     return  Scaffold(
       body: SizedBox(height: MediaQuery.of(context).size.height,
       child: Stack(
@@ -69,14 +71,11 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                           itemCount: 6,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
-                            return Padding( 
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                color: Colors.pink,
-                                height: MediaQuery.of(context).size.height,
-                                width: MediaQuery.of(context).size.width*0.6,
-                            
-                              ),
+                            return ProductCard(price: '\$ 200',
+                            category: 'Men Shoes',
+                            id: '1',
+                            name: 'Adidas NMD RUNNER',
+                            image: "https://d326fntlu7tb1e.cloudfront.net/uploads/58282ea3-b815-4d26-9f4f-382aa62f67cf-HP5404_a1.webp",
                             );
                           }
                           ),

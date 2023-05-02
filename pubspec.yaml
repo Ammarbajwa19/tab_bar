@@ -42,6 +42,7 @@ dependencies:
   provider: ^6.0.5
   antdesign_icons: ^0.0.3
   cached_network_image: ^3.2.3
+  yaml_config: ^0.1.2
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,7 @@ flutter:
   assets:
    - images/intop1.png
    - images/adidas.png
+   - config.yaml
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
