@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tab_bar/Screens/views/shared/appstyle.dart';
+import 'appstyle.dart';
 class ProductCard extends StatefulWidget {
   const ProductCard({super.key, required this.price, required this.category, required this.id, required this.name, required this.image});
   final String price;

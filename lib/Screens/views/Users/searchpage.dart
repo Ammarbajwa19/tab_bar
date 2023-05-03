@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:tab_bar/Screens/views/shared/appstyle.dart';
+
+import '../shared/appstyle.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});

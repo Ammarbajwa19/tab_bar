@@ -1,4 +1,4 @@
-name: tab_bar
+name: online_shopping
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -28,21 +28,17 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cached_network_image: ^3.2.3
   flutter:
     sdk: flutter
+  google_fonts: ^4.0.4
+  provider: ^6.0.5
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  contained_tab_bar_view: ^0.8.0
-  riverpod: ^2.3.0
-  google_fonts: ^4.0.3
-  material_design_icons_flutter: ^6.0.7096
-  provider: ^6.0.5
-  antdesign_icons: ^0.0.3
-  cached_network_image: ^3.2.3
-  yaml_config: ^0.1.2
+cupertino_icons: ^1.0.2
+google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:
@@ -67,10 +63,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-   - images/intop1.png
-   - images/adidas.png
-   - config.yaml
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

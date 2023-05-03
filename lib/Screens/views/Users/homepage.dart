@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:tab_bar/Screens/views/shared/appstyle.dart';
-import 'package:antdesign_icons/antdesign_icons.dart';
-import 'package:tab_bar/Screens/views/shared/product_shared.dart';
+
+import '../shared/appstyle.dart';
+import '../shared/product_shared.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -35,6 +35,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                   Text("Athletic Shoes", style: appstylewithHt(40, Colors.amber, FontWeight.bold, 1.2),),
                   Text("Collection", style: appstylewithHt(40, Colors.amber, FontWeight.bold, 1.2)),
                 TabBar(
+                  padding: EdgeInsets.zero,
             indicatorSize: TabBarIndicatorSize.label,
             indicatorColor: Colors.amber,
             controller: _tabController,
@@ -91,7 +92,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                              Row(
                               children: [
                                 Text('Show_All',style: appstyle(22, Colors.black, FontWeight.bold),),
-                                Icon(AntIcons.caretRightFilled , size: 20,)
+                                Icon(Icons.arrow_right_alt_rounded , size: 20,)
                               ],
                             )
                               ],

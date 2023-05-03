@@ -1,14 +1,13 @@
 // To parse this JSON data, do
 //
-//     final welcome = welcomeFromJson(jsonString);
+//     final sneakers = sneakersFromJson(jsonString);
 
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-Welcome welcomeFromJson(String str) => Welcome.fromJson(json.decode(str));
+Sneakers sneakersFromJson(String str) => Sneakers.fromJson(json.decode(str));
 
-
-class Welcome {
+class Sneakers {
     final String id;
     final String name;
     final String category;
@@ -19,7 +18,7 @@ class Welcome {
     final String description;
     final String title;
 
-    Welcome({
+    Sneakers({
         required this.id,
         required this.name,
         required this.category,
@@ -31,7 +30,7 @@ class Welcome {
         required this.title,
     });
 
-    factory Welcome.fromJson(Map<String, dynamic> json) => Welcome(
+    factory Sneakers.fromJson(Map<String, dynamic> json) => Sneakers(
         id: json["id"],
         name: json["name"],
         category: json["category"],
@@ -42,7 +41,4 @@ class Welcome {
         description: json["description"],
         title: json["title"],
     );
-
 }
-
-

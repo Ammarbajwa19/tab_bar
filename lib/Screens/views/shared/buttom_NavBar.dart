@@ -1,7 +1,8 @@
 import 'package:provider/provider.dart';
-import 'package:tab_bar/Screens/views/shared/bottom_nav.dart';
 import 'package:flutter/material.dart';
-import 'package:tab_bar/controler/mainscreen_provider.dart';
+
+import '../../../controler/mainscreen_provider.dart';
+import 'bottom_nav.dart';
 class ButtomNavBar extends StatelessWidget {
   const ButtomNavBar({
     super.key,

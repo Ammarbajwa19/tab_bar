@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tab_bar/Screens/views/shared/appstyle.dart';
+import '../shared/appstyle.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});

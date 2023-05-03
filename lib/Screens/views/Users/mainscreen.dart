@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tab_bar/Screens/views/Users/cartpage.dart';
-import 'package:tab_bar/controler/mainscreen_provider.dart';
+import '../../../controler/mainscreen_provider.dart';
 import '../shared/buttom_NavBar.dart';
+import 'cartpage.dart';
 import 'profile.dart';
 import 'homepage.dart';
 import 'searchpage.dart';
