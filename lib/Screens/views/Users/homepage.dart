@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:online_shopping/lib/models/sneaker_model.dart';
+import 'package:online_shopping/services/helper.dart';
 
 import '../shared/appstyle.dart';
 import '../shared/product_shared.dart';
@@ -13,6 +15,28 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
   late final TabController _tabController = TabController(length: 3, vsync: this);
+
+    late Future<List<Sneakers>> _male;
+    late Future<List<Sneakers>> _female;
+    late Future<List<Sneakers>> _kids;
+  void getMale(){
+    _male = Helper().getMaleSneakers();
+  }
+  void getFemale(){
+    _female = Helper().getFemaleSneakers();
+  }
+  void getKids(){
+    _kids = Helper().getkidsSneakers();
+  }
+  @override 
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getMale();
+    getKids();
+    getFemale();
+  }
+
   @override
   Widget build(BuildContext context) {
       backgroundColor: const Color(0xFFE2E2E2);
@@ -24,7 +48,8 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
             padding: const EdgeInsets.fromLTRB(16, 45, 0, 0),
             height: MediaQuery.of(context).size.height*0.4,
             decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage("images/top_image.png"),fit: BoxFit.fill )
+              image: DecorationImage(
+                image: AssetImage("images/top_image.png"),fit: BoxFit.fill )
             ),
             child: Container(
               padding: const EdgeInsets.only(left: 8, bottom: 15),
@@ -32,8 +57,10 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Athletic Shoes", style: appstylewithHt(40, Colors.amber, FontWeight.bold, 1.2),),
-                  Text("Collection", style: appstylewithHt(40, Colors.amber, FontWeight.bold, 1.2)),
+                  Text("Athletic Shoes", 
+                  style: appstylewithHt(40, Colors.amber, FontWeight.bold, 1.2),),
+                  Text("Collection", 
+                  style: appstylewithHt(40, Colors.amber, FontWeight.bold, 1.2)),
                 TabBar(
                   padding: EdgeInsets.zero,
             indicatorSize: TabBarIndicatorSize.label,
@@ -55,7 +82,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
           ),
 
           Padding(
-            padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.265),
+            padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.245),
             child: Container(
               padding: EdgeInsets.only(left: 12),
               child: Container(
@@ -67,7 +94,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                   (
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height*0.405,
+                        height: MediaQuery.of(context).size.height*0.350,
                         child: ListView.builder(
                           itemCount: 6,
                           scrollDirection: Axis.horizontal,
@@ -88,10 +115,12 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text("Update", style: appstyle(24, Colors.black, FontWeight.bold),),
+                                Text("Update", 
+                                style: appstyle(24, Colors.black, FontWeight.bold),),
                              Row(
                               children: [
-                                Text('Show_All',style: appstyle(22, Colors.black, FontWeight.bold),),
+                                Text('Show_All',
+                                style: appstyle(22, Colors.black, FontWeight.bold),),
                                 Icon(Icons.arrow_right_alt_rounded , size: 20,)
                               ],
                             )
